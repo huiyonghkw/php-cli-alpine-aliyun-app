@@ -50,7 +50,7 @@ RUN apk update \
 	    php7-tokenizer@community \
 	    php7-gd@community \
 		php7-mongodb@testing \
-		php7-fileinfo \
+		php7-fileinfo@community \
 
 	 && rm -rf /var/cache/apk/*
 
