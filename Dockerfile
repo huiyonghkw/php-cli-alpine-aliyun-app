@@ -65,8 +65,8 @@ RUN rm -rf /var/cache/apk/*
 COPY ./php.ini /etc/php7/php.ini
 
 # composer
-#RUN curl -sS https://getcomposer.org/installer | \
-#    php -- --install-dir=/usr/bin/ --filename=composer
+RUN curl -sS https://getcomposer.org/installer | \
+    php -- --install-dir=/usr/bin/ --filename=composer
 
 RUN wget https://dl.laravel-china.org/composer.phar -O /usr/local/bin/composer \
 	&& chmod a+x /usr/local/bin/composer
