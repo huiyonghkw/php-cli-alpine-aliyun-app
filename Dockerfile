@@ -65,6 +65,7 @@ RUN rm -rf /var/cache/apk/*
 COPY ./php.ini /etc/php7/php.ini
 
 # composer
+ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN curl -sS https://getcomposer.org/installer | \
     php -- --install-dir=/usr/bin/ --filename=composer
 
