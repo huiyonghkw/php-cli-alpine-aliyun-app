@@ -16,6 +16,7 @@ RUN apk update \
 	&& apk upgrade \
 	&& apk add \
 		curl \
+		zeromq \
 	    php7@community \
 	    php7-dev@community \
 	    php7-apcu@community \
@@ -51,7 +52,6 @@ RUN apk update \
 	    php7-gd@community \
 		php7-mongodb@testing \
 		php7-fileinfo@community \
-
 	 && rm -rf /var/cache/apk/*
 
 # https://github.com/docker-library/php/issues/240
