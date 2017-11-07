@@ -7,7 +7,7 @@ This image based entirely on alpine Linux, installing PHP extensions and 7 CLI m
 
 ## Upgrade
 
-`2017-11-06` Support [Zeromq](https://pkgs.alpinelinux.org/package/edge/main/x86/zeromq), The ZeroMQ messaging library and tools.
+`2017-11-06` Support [PHP7 extension for ZeroMQ](https://pkgs.alpinelinux.org/package/edge/community/x86/php7-zmq), The ZeroMQ messaging library and tools.
 
 
 ## Build & Push
