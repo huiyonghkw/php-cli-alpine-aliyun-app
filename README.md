@@ -7,6 +7,9 @@ This image based entirely on alpine Linux, installing PHP extensions and 7 CLI m
 
 ## Upgrade
 
+
+`2017-12-11` [413 request entity too large](https://www.iteblog.com/archives/1421.html)
+
 `2017-12-04` Support [PHP7 extension for interfacing with memcached via libmemcached library](https://pkgs.alpinelinux.org/package/edge/community/x86/php7-memcached)
 
 `2017-11-06` Support [PHP7 extension for ZeroMQ](https://pkgs.alpinelinux.org/package/edge/community/x86/php7-zmq), The ZeroMQ messaging library and tools.
@@ -16,7 +19,7 @@ This image based entirely on alpine Linux, installing PHP extensions and 7 CLI m
 
 1. Docker build image
 ```bash
-❯ docker build -t bravist/php-cli-alpine-aliyun-app:1.9 .
+❯ docker build -t bravist/php-cli-alpine-aliyun-app:1.10 .
 ```
 
 2. Login [Docker Hub](https://hub.docker.com)
@@ -29,6 +32,6 @@ Login Succeeded
 
 3. Push image to [Docker Hub](https://hub.docker.com)
 ```bash
-❯ docker push bravist/php-cli-alpine-aliyun-app:1.9
+❯ docker push bravist/php-cli-alpine-aliyun-app:1.10
 ```
 
