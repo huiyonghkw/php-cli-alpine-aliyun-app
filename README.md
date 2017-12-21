@@ -20,7 +20,7 @@ This image based entirely on alpine Linux, installing PHP extensions and 7 CLI m
 
 1. Docker build image
 ```bash
-❯ docker build -t bravist/php-cli-alpine-aliyun-app:1.10 .
+❯ docker build -t bravist/php-cli-alpine-aliyun-app:1.11 .
 ```
 
 2. Login [Docker Hub](https://hub.docker.com)
@@ -33,6 +33,6 @@ Login Succeeded
 
 3. Push image to [Docker Hub](https://hub.docker.com)
 ```bash
-❯ docker push bravist/php-cli-alpine-aliyun-app:1.10
+❯ docker push bravist/php-cli-alpine-aliyun-app:1.11
 ```
 
