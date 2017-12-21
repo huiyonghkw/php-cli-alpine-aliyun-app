@@ -8,6 +8,7 @@ This image based entirely on alpine Linux, installing PHP extensions and 7 CLI m
 ## Upgrade
 
 `2017-12-21` 新增php.ini推荐配置
+
 `2017-12-11` [413 request entity too large](https://www.iteblog.com/archives/1421.html)
 
 `2017-12-04` Support [PHP7 extension for interfacing with memcached via libmemcached library](https://pkgs.alpinelinux.org/package/edge/community/x86/php7-memcached)
