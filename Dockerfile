@@ -66,7 +66,7 @@ RUN apk update \
 		php7-memcached@community \
  	&& cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
 	&& echo "${TIMEZONE}" > /etc/timezone \
-	&& apk del tzdata && \
+	&& apk del tzdata \
  	&& rm -rf /var/cache/apk/*
 
 # https://github.com/docker-library/php/issues/240
