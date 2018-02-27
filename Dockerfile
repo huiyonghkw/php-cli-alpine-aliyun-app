@@ -64,6 +64,7 @@ RUN apk update \
 		php7-fileinfo@community \
 		php7-zmq@community \
 		php7-memcached@community \
+		php7-xmlreader@community \
  	&& cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
 	&& echo "${TIMEZONE}" > /etc/timezone \
 	&& apk del tzdata \
