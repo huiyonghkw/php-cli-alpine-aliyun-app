@@ -7,6 +7,8 @@ This image based entirely on alpine Linux, installing PHP extensions and 7 CLI m
 
 ## Upgrade
 
+`2019-08-04` 阿里云镜像切换HTTPS
+
 `2017-12-21` 新增php.ini推荐配置
 
 `2017-12-11` [413 request entity too large](https://www.iteblog.com/archives/1421.html)
@@ -20,7 +22,7 @@ This image based entirely on alpine Linux, installing PHP extensions and 7 CLI m
 
 1. Docker build image
 ```bash
-❯ docker build -t bravist/php-cli-alpine-aliyun-app:1.11 .
+❯ docker build -t bravist/php-cli-alpine-aliyun-app:1.13 .
 ```
 
 2. Login [Docker Hub](https://hub.docker.com)

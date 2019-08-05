@@ -7,9 +7,9 @@ MAINTAINER bravist <chenghuiyong1987@gmail.com>
 # https://pkgs.alpinelinux.org/packages
 
 # Mirror mirror switch to Ali-OSM (Alibaba Open Source Mirror Site) - http://mirrors.aliyun.com/
-RUN echo 'http://mirrors.aliyun.com/alpine/latest-stable/main' > /etc/apk/repositories \
-	&& echo '@community http://mirrors.aliyun.com/alpine/latest-stable/community' >> /etc/apk/repositories \
-	&& echo '@testing http://mirrors.aliyun.com/alpine/edge/testing' >> /etc/apk/repositories
+RUN echo 'https://mirrors.aliyun.com/alpine/latest-stable/main' > /etc/apk/repositories \
+	&& echo '@community https://mirrors.aliyun.com/alpine/latest-stable/community' >> /etc/apk/repositories \
+	&& echo '@testing https://mirrors.aliyun.com/alpine/edge/testing' >> /etc/apk/repositories
 
 # https://github.com/matriphe/docker-alpine-php/blob/master/7.0/FPM/Dockerfile
 # Environments
@@ -74,7 +74,7 @@ RUN apk update \
 # https://gist.github.com/guillemcanal/be3db96d3caa315b4e2b8259cab7d07e
 # https://forum.alpinelinux.org/forum/installation/php-iconv-issue
 
-RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing gnu-libiconv
+RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community gnu-libiconv
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 RUN rm -rf /var/cache/apk/*
 
@@ -90,5 +90,7 @@ RUN sed -i "s|;*date.timezone =.*|date.timezone = ${TIMEZONE}|i" /etc/php7/php.i
 # composer
 RUN curl -sS https://getcomposer.org/installer | \
     php -- --install-dir=/usr/bin/ --filename=composer
+
+RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
 CMD ["/usr/bin/php", "-a"]
